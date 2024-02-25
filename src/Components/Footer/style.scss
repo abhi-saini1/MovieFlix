@@ -1,0 +1,47 @@
+@import '../../mixin.scss';
+
+.footer{
+    padding: 60px 0;
+    background-color: black;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .conten-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p{
+        font-size: 12px;
+        line-height: 18px;
+        opacity: 0.5;
+        text-align: center;
+        @include md{
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+    }
+    .social-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+            &:hover{
+                background-color: #c51751;
+            }
+        }
+    }
+}

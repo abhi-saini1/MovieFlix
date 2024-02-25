@@ -9,6 +9,8 @@ const PageNotFound = lazy(()=> import('./Pages/404/PageNotFound'))
 const SearchResults = lazy(()=> import('./Pages/SearchResults/SearchResults'))
 
 import {getApiConfiguration} from './Store/homeSlice';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -34,7 +36,8 @@ const App = () => {
   };
   return (
       <BrowserRouter>
-        <Suspense >
+        <Suspense fallback={<div className='loader'></div>}>
+          <Header/>
         <Routes>
           <Route exact path='/' Component={Home}/>
           <Route path='/:mediaType/:id' Component={Details}/>
@@ -42,6 +45,7 @@ const App = () => {
           <Route path='/explore/:mediaType' Component={Explore}/>
           <Route path='*' Component={PageNotFound}/>
         </Routes>
+        <Footer/>
         </Suspense>
       </BrowserRouter>
       
