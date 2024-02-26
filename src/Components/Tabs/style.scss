@@ -1,0 +1,37 @@
+.tabs{
+    background-color: white;
+    height: 34px;
+    border-radius: 20px;
+    padding: 2px;
+    .tab-items{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        position: relative;
+        .tab-item{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            color: var(--black);
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &.active{
+            color: white;
+            }   
+        }
+        .moving{
+            height: 30px;
+            width: 100px;
+            border-radius: 15px;
+           background: var(--gradient);
+            position: absolute;
+            left: 0;
+            transition: left cubic-bezier(0.88, 0.34,0.565,1.35)0.5s;
+        }
+    }
+}

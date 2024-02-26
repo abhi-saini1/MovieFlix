@@ -1,35 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --black: #030c1a;
-    --white: #fff;
-    --pink: #c51751;
+:root {
+  --black: #030c1a;
+  --white: #fff;
+  --pink: #c51751;
+  --gradient:  linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
 }
-body{
-    background-color: var(--black);
-    font-family: "Roboto",sans-serif;
-    font-weight: normal;
+body {
+  background-color: var(--black);
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
 }
-.loader{
-    width: 45px;
-    height: 45px;
-    border: 5px solid #fff;
-    border-bottom-color: #740ad6 ;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: spin 1s linear infinite;
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #fff;
+  border-bottom-color: #740ad6;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: spin 1s linear infinite;
 }
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
