@@ -16,8 +16,8 @@ const Trending = () => {
         <ContentWrapper>
             <Container>
                 <Row>
-                    <div className='col-12'>
-                        <h2 className='carousel-title'>Trending</h2>
+                    <div className='col-12 text-center'>
+                        <h2 className='carousel-title'>Trending Movies</h2>
                     </div>
                 </Row>
             </Container>

@@ -27,7 +27,21 @@ const Carousel = ({data,title,loading,endpoint}) => {
         })
     }
 
-    
+    const effectItem = ()=>{
+        return (
+            <div className="skeletonItem">
+                <div className="posterBlock skeleton"></div>
+                <div className="textBlock">
+                    <div className="title skeleton">
+
+                    </div>
+                    <div className="date skeleton">
+
+                    </div>
+                </div>
+            </div>
+        )
+    }
   return (
     <div className='carousel'>
         <ContentWrapper>
@@ -58,20 +72,21 @@ const Carousel = ({data,title,loading,endpoint}) => {
                                     {item.title || item.name}
                                     </span>
                                     <span className='date'>
-                                        {/* {dayjs(item.release_Date).format("MMM D, YYYY")} */}
                                         {dayjs(item.release_Date).format('MMM D, YYYY')}
                                     </span>
                                 </div>
-                                
-                                
                             </div>
                         )
                     })
                 }
             </div>
             ) : (
-                <div>
-                    
+                <div className='loadingSkeleton'>
+                    {effectItem()}
+                    {effectItem()}
+                    {effectItem()}
+                    {effectItem()}
+                    {effectItem()}
                 </div>
             )}
             
