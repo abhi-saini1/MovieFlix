@@ -84,6 +84,86 @@
                     line-height: 28px ;
                 }
             }
+            .heading{
+                font-size: 18px;
+                @include md{
+                    font-size: 20px;
+                }
+            }
+            .description{
+                font-size: 14px;
+                opacity: 0.5;
+                margin-bottom: 20px;
+                @include md{
+                    font-size: 16px;
+                    margin-bottom: 18px;
+                }
+            }
+            .info{
+                display: flex;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding: 15px 0;
+                margin-bottom: 20px;
+                .info-item{
+                    margin-right: 10px;
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+                .text{
+                    margin-right: 10px;
+                    opacity: 0.5;
+                    line-height: 24px;
+                    &.bold{
+                        font-weight: 600;
+                        opacity: 1;
+                    }
+                }
+            }
+            .rows{
+                display: flex;
+                gap: 20px;
+                .rating{
+                    max-width: 60px;
+                    background-color: var(--black);
+                    @include md{
+                        max-width: 80px;
+                    }
+                    .CircularProgressbar-text{
+                        fill: white;
+                        font-size: 20px;
+                    }
+                }
+                .playbtn{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    cursor: pointer;
+                    span{
+                        font-size: 14px;
+                        @include md{
+                            font-size: 20px;
+                        }
+                    }
+                    .circle-play{
+                        svg{
+                            width: 60px;
+                            height: 60px;
+                            
+                            transition: all 0.5s ease-in-out;
+                            @include md{
+                                width: 80px;
+                                height: 80px;
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                transform: scale(1.1);
+                                color: var(--pink);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,54 @@
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 0;
+    .opacityLayer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: rgba(0,0,0,0.25);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        transition: opacity 400ms;
+    }
+    .videoplayer{
+        position: relative;
+        width: 800px;
+        background-color: white;
+        aspect-ratio: 16/9;
+        transform: scale(0.2);
+        transition: transform 400ms;
+
+        svg{
+            position: absolute;
+            right: 0;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+        }
+        
+    }
+    &.visible{
+        opacity: 1;
+        visibility: visible;
+        .opacityLayer{
+            opacity: 1;
+
+        }
+        .videoplayer{
+            transform: scale(1.1);
+        }
+    }
+}
