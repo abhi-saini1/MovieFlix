@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import ContentWrapper from '../../../Components/ContentWrapper/ContentWrapper'
 import { Container, Row } from 'react-bootstrap'
 import Img from '../../../Components/LazyLoadImage/Img'
+import './style.scss';
 const Cast = ({data,loading}) => {
     const {url} = useSelector((state)=> state.home)
   return (
@@ -23,6 +24,12 @@ const Cast = ({data,loading}) => {
                             <div className='list-item' key={item.id}>
                                 <div className='profile-img'>
                                     <Img src={imgUrl}/>
+                                </div>
+                                <div className='profile-name'>
+                                    {item.name}
+                                </div>
+                                <div className='profile-character'>
+                                    {item.character}
                                 </div>
                             </div>
                         )
