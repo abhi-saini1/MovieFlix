@@ -1,3 +1,4 @@
+
 .tabs{
     background-color: white;
     height: 34px;
@@ -22,16 +23,18 @@
             transition: all 0.3s ease;
             &.active{
             color: white;
-            }   
+            }  
+           
         }
         .moving{
             height: 30px;
             width: 100px;
             border-radius: 15px;
-           background: var(--gradient);
+            background: var(--gradient);
             position: absolute;
             left: 0;
             transition: left cubic-bezier(0.88, 0.34,0.565,1.35)0.5s;
+           
         }
     }
 }

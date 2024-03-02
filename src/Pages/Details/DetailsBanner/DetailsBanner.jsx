@@ -67,7 +67,6 @@ const DetailsBanner = ({video,crew}) => {
                                                 {data.status}
                                               </div>
                                             </div>
-                                            
                                         </div>
                                     )}
                                     {data.release_date &&(
@@ -92,7 +91,8 @@ const DetailsBanner = ({video,crew}) => {
                                         
                                     </div>
                                     )}
-                                    {/* {director?.length > 0 && (
+                                  </div>  
+                                    {director?.length > 0 && (
                                         <div className='info'>
                                             <div className='text bold'>
                                                 Director: {''}
@@ -121,8 +121,8 @@ const DetailsBanner = ({video,crew}) => {
                                                 ))}
                                             </div>
                                         </div>
-                                    )} */}
-                                </div>
+                                    )}
+                                
                                 <div className='rows'>
                                     <Rating rating={data.vote_average.toFixed(1)}/>
                                     <div className='playbtn' onClick={()=>{setShow(true),setVideoId(video.key)}}>
@@ -144,7 +144,9 @@ const DetailsBanner = ({video,crew}) => {
              )}
             </>
         ) : (
-            <div></div>
+            <div className='detailsBannerSkeleton'>
+                
+            </div>
         )}
 
         

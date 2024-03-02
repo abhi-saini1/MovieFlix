@@ -1,3 +1,4 @@
+@import '../../mixin.scss';
 .carousel-section{
     position: relative;
     margin-bottom: 70px;
@@ -8,8 +9,15 @@
         margin-bottom: 20px;
     }
     .carousel-title{
-        color: white;
-        font-size: 52px;
+        font-size: 32px;
+        color:white;
+        margin-bottom: 20px;
         font-weight: 500;
+        @include md{
+            font-size: 52px;
+        }
+        @include sm{
+            font-size: 24px;
+        }
     }
 }

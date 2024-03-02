@@ -106,7 +106,7 @@
                 margin-bottom: 20px;
                 .info-item{
                     margin-right: 10px;
-                    display: flex;
+                    display: inline-flex;
                     flex-flow: row wrap;
                 }
                 .text{
@@ -166,4 +166,6 @@
             }
         }
     }
+
+    
 }
