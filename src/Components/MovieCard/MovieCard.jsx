@@ -19,7 +19,7 @@ const MovieCard = ({data,fromSearch,mediaType}) => {
                 <Img src={posterUrl} className='poster-img'/>
                 {!fromSearch && (
                     <React.Fragment>
-                        {/* <Rating rating={data.vote_average.toFixed(1)}/> */}
+                        <Rating rating={data.vote_average.toFixed(1)}/>
                     </React.Fragment>
                 )}
             </div>

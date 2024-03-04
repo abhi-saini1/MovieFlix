@@ -151,7 +151,7 @@ const Explore = () => {
               loader={<Spinner/>}>
 
                 {data?.results?.map((item,i)=>{
-                  if(item.media_type === 'person') return
+                  if(item.media_type === 'person') return;
                   return (
                     <MovieCard key={i}
                     data={item}
